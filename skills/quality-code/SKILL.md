@@ -28,7 +28,7 @@ function sendSMS(to: PhoneNumber, body: string) {
 }
 ```
 
-Prefer branded types over classes when the value crosses a serialization boundary (DB → server → client) — brands survive `JSON.stringify`, class instances don't.
+If the project already uses a library with native branded-type support (e.g. Effect), use their primitives instead of rolling your own.
 
 ### Discriminated unions over flag bags
 
