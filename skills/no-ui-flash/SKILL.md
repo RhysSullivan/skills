@@ -22,7 +22,7 @@ The server/edge that serves the SPA's HTML usually already holds what the client
 - **Data-shaped states**: if the edge can cheaply answer "empty vs. populated" (a count, a KV flag, a cookie recording last-known state), it can serve the right variant — empty-state HTML, the populated shell, a redirect to onboarding — instead of a one-skeleton-fits-all document.
 - **Preferences** (theme, locale, density): read the preference cookie at the edge and serve the correct variant in the initial HTML. A class on `<html>` beats a client-side flip.
 
-Edge cases that bite (learned on the auth instance, but they generalize):
+Edge cases that bite (described for auth, but they generalize to any cookie-carried state):
 
 - **Gate document navigations only** (GET/HEAD with `sec-fetch-dest: document`, falling back to `Accept: text/html`). API routes, module requests, and health probes answer for themselves.
 - **Clear invalid state carriers, don't just route around them.** A cookie that fails validation is worse than none — anything keyed on its *presence* keeps misbehaving until it's gone. Expire it on the response.
