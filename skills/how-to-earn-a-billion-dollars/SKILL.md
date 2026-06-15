@@ -1,5 +1,5 @@
 ---
-name: startup-ideas
+name: how-to-earn-a-billion-dollars
 description: Use when brainstorming, generating, or evaluating startup ideas, deciding what to build, or reasoning about how a startup creates wealth and grows. Encodes Paul Graham's framework — outcome = growth rate × duration, growth comes from users loving the product enough to tell friends (empathy, not exploitation), and the best ideas come from building cool things with friends rather than searching for "startup ideas."
 ---
 
